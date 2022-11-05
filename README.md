@@ -12,20 +12,21 @@ The main Objective of our project is to predict future bike sharing demand with 
 The dataset contains weather information (Temperature, Humidity, Windspeed, Visibility, Dewpoint, Solar radiation, Snowfall, Rainfall), the number of bikes rented per hour and date information.
 Attribute Information:
 
-1. Date : year-month-day
-2. Rented Bike count - Count of bikes rented at each hour
-3. Hour - Hour of he day
-4. Temperature-Temperature in Celsius
-5. Humidity - %
-6. Windspeed - m/s
-7. Visibility - 10m
-8. Dew point temperature - Celsius
-9. Solar radiation - MJ/m2
-10. Rainfall - mm
-11. Snowfall - cm
-12. Seasons - Winter, Spring, Summer, Autumn
-13. Holiday - Holiday/No holiday
-14. Functional Day - NoFunc(Non Functional Hours), Fun(Functional hours)
+•	Date: year-month-day
+•	Rented Bike count - Count of bikes rented at each hour
+•	Hour - Hour of the day
+•	Temperature-Temperature in Celsius
+•	Humidity - %
+•	Windspeed - m/s
+•	Visibility - 10m
+•	Dew point temperature - Celsius
+•	Solar radiation - MJ/m2
+•	Rainfall - mm
+•	Snowfall - cm
+•	Seasons - Winter, Spring, Summer, Autumn
+•	Holiday - Holiday/No holiday
+•	Functional Day - NoFunc(Non Functional Hours), Fun(Functional hours)
+
 
 ## Libraries and Tools 
 1. Numpy 
@@ -34,10 +35,58 @@ Attribute Information:
 4. sklearn 
 5. Seaborn 
 5. Matplotlib 
-## EDA Analysis
-    1. We can clearly see in EDA that Bike Rent Count is strongly dependant on Hour Count during different days throughout week, months and season's.
-    2. There is high colinearity present between Temprature and Dew Point Temprature.
-    3. There is no strong linear relation between dependant variable and independant variable. 
+# Steps Involved
+●	Exploratory Data Analysis 
+After loading the dataset, we performed this method by comparing our target variable that is Rented Bike Count with other independent variables. This process helped us figuring out various aspects and relationships among the target and the independent variables. It gave us a better idea of which feature behaves in which manner compared to the target variable.
+
+## Null values Treatment
+Our dataset contains a no null values so we do not have to concerned about missing values. 
+
+## Outlier Treatment 
+Our dataset does not contain any outliers so we do not have to worry about outliers. 
+
+## Explore our Numerical columns
+
+1. Skewness - We have seen some of the features are skewed positively or negatively. we should treat skewness as it will mislead the results while applying algorithms.
+
+2. Correlation - we are able to see this temperature(°C) and dev point temperature(°C) column are highly correlated i.e. 0.91.
+We need to drop this column then it will not affect the outcome of our analysis and also having same variation.
+
+3. Multicollinearity – we have seen there is high multicollinearity between columns and also having high VIF and affects the results. 
+
+## Encoding of categorical columns 
+We used One Hot Encoding to produce dummy variable which uses binary integers of 0 and 1 to encode our categorical features because categorical features that are in string format cannot be understood by the machine and needs to be converted to numerical format.
+Our categorical values are Hour, Seasons, Holidays, Functional days etc.
+
+## Normalization of features
+Our dependent variable ‘Rented bike count” is right skewed so it needs to be normalized and the methods used for normalization is log10, square, square root.
+
+
+# Model Training
+## Test Train Split
+We need to split the data into train and test data for estimating the performance of machine learning algorithms. We split in 75-25 % of the dataset.
+
+## Fitting different models
+For modelling we tried various regression algorithms like:
+1.	Logistic Regression
+2.	Lasso Regressor
+3.	Ridge Regressor
+4.	Decision Tree Regressor
+5.	Random Forest Classifier
+
+## Tuning the hyperparameters for better accuracy
+Tuning the hyperparameters of respective algorithms is necessary for getting better accuracy and to avoid overfitting in case of tree-based models. 
+1.	Gradient Boosting
+2.	Ada Boosting
+3. XG Boosting
+
+# Evaluation metrices 
+1.	Mean Absolute error
+2.	Mean Squared error
+3.	Root Mean Squared error
+4.	R Squared 
+5.	Adjusted R Squared
+
     
 ## Conclusion 
 1. In holidays or non-working days there is demand in rented bikes.
