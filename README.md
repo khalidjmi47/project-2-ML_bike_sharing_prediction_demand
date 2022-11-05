@@ -34,8 +34,9 @@ Attribute Information:
 4. sklearn 
 5. Seaborn 
 5. Matplotlib 
+
 # Steps Involved
-●	Exploratory Data Analysis 
+## Exploratory Data Analysis 
 After loading the dataset, we performed this method by comparing our target variable that is Rented Bike Count with other independent variables. This process helped us figuring out various aspects and relationships among the target and the independent variables. It gave us a better idea of which feature behaves in which manner compared to the target variable.
 
 ## Null values Treatment
@@ -77,9 +78,9 @@ For modelling we tried various regression algorithms like:
 Tuning the hyperparameters of respective algorithms is necessary for getting better accuracy and to avoid overfitting in case of tree-based models. 
 1.	Gradient Boosting
 2.	Ada Boosting
-3. XG Boosting
+3.  XG Boosting
 
-# Evaluation metrices 
+## Evaluation metrices 
 1.	Mean Absolute error
 2.	Mean Squared error
 3.	Root Mean Squared error
@@ -87,7 +88,7 @@ Tuning the hyperparameters of respective algorithms is necessary for getting bet
 5.	Adjusted R Squared
 
     
-## Conclusion 
+# Conclusion 
 1. In holidays or non-working days there is demand in rented bikes.
 2. There is a surge of high demand in the morning 8AM and in evening 6PM as the people might be going to their office at morning 8AM and returning from their office at the 6PM.
 3. People preferred more rented bikes in the morning compared with evening.
