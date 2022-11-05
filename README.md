@@ -1,6 +1,5 @@
-# project-2-ML_bike_sharing_prediction_demand
+# project-2-ML_bike_sharing_demand_prediction
 
-## Seoul-Bike-Sharing-Demand Prediction 
 In this project, we train a model to predict the number rental bikes at any hour of the given year in different weather condition like Temprature, Humidity, Windspeed, Dew Point Temprature, Radiation, Snowfall, and Rainfall.
 First we did EDA (Exploratory Data Analysis) on given data set to get insight of data and after knowing all variable factors and target variable and relation between them we will apply different kind of Regression models. 
 We evaluated different models on the basis of evaluation metrics and compared different models are, Linear Regression, Lasso Regression, Ridge REgression, Elastic Net REgression, Desicion Tree Regressor, Random Forest Regressor. 
